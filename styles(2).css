@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.block {
+    height: 100px;
+    width: 300px;
+    background-color: rgb(109, 103, 103);
+    border: 5px solid rgb(0, 0, 0);
+    display: inline-block;
+    margin: -1px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 2s; 
+    transform: rotateY(0deg); 
+}
+
+.text {
+    position: absolute;
+    font-size:xx-large;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    opacity: 0;
+    transition: transform 2s, opacity 2s; 
+}
+
+.container:hover .block {
+    transform: rotateY(90deg); 
+}
+
+.container:hover .text {
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1;
+}
